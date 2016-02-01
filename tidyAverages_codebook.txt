@@ -1,0 +1,39 @@
+Code Book for tidyAverages.txt
+
+"subject"
+An integer variable that identifies which subject (i.e. person) is being measured. The range is 1:30.
+
+"activity"
+A string variable that describes the activity that the subject is participating in. The options are (walking, walking_upstairs, walking_downstairs, sitting, standing, laying).
+
+"domain"
+A string variable that identifies whether the source data is time-domain or frequency-domain. Options are "time" and "frequency"
+
+"acceleration"
+A string variable that identifies whether the acceleration measurement is stracking the body signals or gravity signals. Options are "body" and "gravity"
+
+"source"
+A string variable that identifies the source of the data, which can be either the "accelerometer" or the "gyroscope" on the phone
+
+"firstDerivation"
+A string variable that identifies whether the value describes a derived "jerk" or "magnitude". NA indicates that there is no such derivation.
+
+"secondDerivation"
+A string variable that identifies whether the value describes the "magnitude" of a value that already has a first deriviation (as indicated by the "firstDerivation" column). NA indicates there is no such derivation.
+
+"calculation"
+A string variable that indicates whether the value describes either the "mean" or "stdev" (standard deviation) of the measurement.
+
+"direction"
+A string variable that indicates whether the value describes movement along the "x", "y", or "z" axis. NA indicates that value is a measure of magnitude (as indicated by either the "firstDerivation" or "secondDerivation" column)
+
+"meanValue"
+The mean value of the measurement, grouped by all of the above listed variables. If the source is "accelerometer", the unit is "g" as in the accelration of gravity. If the source is "gyroscope", the unit is "rad/seg". The unit is also indicated in the "unit" column.
+
+"unit"
+Indicates the units of the meanValue column. Can be either "g" or "rad/seg". 
+
+
+The original data and information describing the original data can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The readme describing the process by which this final table can be created can be found in this repository, and is titled README.md
